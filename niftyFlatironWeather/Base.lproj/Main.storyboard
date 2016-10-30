@@ -1,26 +1,143 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="DMS-1S-kEU">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <scene sceneID="LSv-Vm-LZg">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="DMS-1S-kEU" customClass="ViewController" customModule="niftyFlatironWeather" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="spW-5D-VgL"/>
+                        <viewControllerLayoutGuide type="bottom" id="RwP-H5-d0J"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="2rN-dZ-tE9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temperature (C°)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F5P-Gm-CLt">
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Today's Weather Is:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w9o-he-x9I">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ka8-qa-Pfu">
+                                <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="5 - Day"/>
+                                <connections>
+                                    <action selector="fiveDayButton:" destination="DMS-1S-kEU" eventType="touchUpInside" id="ZRr-vh-Qv9"/>
+                                    <segue destination="6JY-cE-dff" kind="show" identifier="fiveDaySegue" id="HFg-1P-1QE"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Summary" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="lA0-mY-OKI">
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="w9o-he-x9I" secondAttribute="trailing" constant="97" id="4iQ-8g-0VC"/>
+                            <constraint firstItem="w9o-he-x9I" firstAttribute="top" secondItem="spW-5D-VgL" secondAttribute="bottom" constant="64" id="CRa-vc-y1y"/>
+                            <constraint firstItem="F5P-Gm-CLt" firstAttribute="top" secondItem="w9o-he-x9I" secondAttribute="bottom" constant="42" id="JF4-I3-SdV"/>
+                            <constraint firstItem="RwP-H5-d0J" firstAttribute="top" secondItem="Ka8-qa-Pfu" secondAttribute="bottom" constant="95" id="K1A-sb-ZuB"/>
+                            <constraint firstItem="lA0-mY-OKI" firstAttribute="top" secondItem="F5P-Gm-CLt" secondAttribute="bottom" constant="62" id="LxV-dZ-oue"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="lA0-mY-OKI" secondAttribute="trailing" constant="22" id="NLa-8h-y3l"/>
+                            <constraint firstItem="Ka8-qa-Pfu" firstAttribute="leading" secondItem="2rN-dZ-tE9" secondAttribute="leadingMargin" id="Q8u-yp-b2W"/>
+                            <constraint firstItem="Ka8-qa-Pfu" firstAttribute="trailing" secondItem="2rN-dZ-tE9" secondAttribute="trailingMargin" id="SFk-Ha-zia"/>
+                            <constraint firstItem="w9o-he-x9I" firstAttribute="leading" secondItem="2rN-dZ-tE9" secondAttribute="leadingMargin" constant="96" id="TIl-Rr-n9m"/>
+                            <constraint firstItem="lA0-mY-OKI" firstAttribute="top" secondItem="F5P-Gm-CLt" secondAttribute="bottom" constant="62" id="c7I-F4-Eld"/>
+                            <constraint firstItem="F5P-Gm-CLt" firstAttribute="top" secondItem="w9o-he-x9I" secondAttribute="bottom" constant="42" id="cOM-nA-da9"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="F5P-Gm-CLt" secondAttribute="trailing" constant="22" id="ctX-dk-KcW"/>
+                            <constraint firstItem="lA0-mY-OKI" firstAttribute="leading" secondItem="2rN-dZ-tE9" secondAttribute="leadingMargin" constant="21" id="k6R-ll-QZW"/>
+                            <constraint firstItem="F5P-Gm-CLt" firstAttribute="leading" secondItem="2rN-dZ-tE9" secondAttribute="leadingMargin" constant="21" id="oTm-nQ-Arw"/>
+                            <constraint firstItem="Ka8-qa-Pfu" firstAttribute="top" secondItem="lA0-mY-OKI" secondAttribute="bottom" constant="157" id="tBx-kM-ce2"/>
+                            <constraint firstItem="Ka8-qa-Pfu" firstAttribute="top" secondItem="lA0-mY-OKI" secondAttribute="bottom" constant="157" id="w7d-ca-acz"/>
+                        </constraints>
                     </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="summaryLabel" destination="lA0-mY-OKI" id="EpA-d5-gpC"/>
+                        <outlet property="temperatureLabel" destination="F5P-Gm-CLt" id="7zJ-dT-h6W"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x29-ch-K8L" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-871.20000000000005" y="-346.77661169415296"/>
+        </scene>
+        <!--Five Day Collection View Controller-->
+        <scene sceneID="g8B-yT-JbT">
+            <objects>
+                <collectionViewController id="6JY-cE-dff" customClass="FiveDayCollectionViewController" customModule="niftyFlatironWeather" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="B6I-ez-hhU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Ap4-ta-4I0">
+                            <size key="itemSize" width="376" height="149"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="dayCell" id="eX8-5E-7Z7" customClass="IndividualDayViewCell" customModule="niftyFlatironWeather" customModuleProvider="target">
+                                <rect key="frame" x="-1" y="0.0" width="376" height="149"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="376" height="149"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9QG-pD-WRi" userLabel="tempLabel">
+                                            <frame key="frameInset" minX="36" minY="8" width="128" height="71"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c8h-IB-j8l" userLabel="summaryLabel">
+                                            <frame key="frameInset" minX="18" minY="58" width="350" height="83"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZuY-wp-PFP" userLabel="dayLabel">
+                                            <frame key="frameInset" minX="172" width="196" height="71"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </view>
+                                <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="dayLabel" destination="ZuY-wp-PFP" id="cxY-DL-DDd"/>
+                                    <outlet property="summaryLabel" destination="c8h-IB-j8l" id="JmU-II-UIZ"/>
+                                    <outlet property="tempLabel" destination="9QG-pD-WRi" id="7H0-5d-SrQ"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="6JY-cE-dff" id="Fkh-8Y-deD"/>
+                            <outlet property="delegate" destination="6JY-cE-dff" id="kCI-wT-Nys"/>
+                        </connections>
+                    </collectionView>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jaw-cK-XHU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="61.600000000000001" y="-347.67616191904051"/>
         </scene>
     </scenes>
 </document>

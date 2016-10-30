@@ -12,6 +12,12 @@
 		8F07727A1DC2FDEF0061A640 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F0772781DC2FDEF0061A640 /* Main.storyboard */; };
 		8F07727C1DC2FDEF0061A640 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F07727B1DC2FDEF0061A640 /* Assets.xcassets */; };
 		8F07727F1DC2FDEF0061A640 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F07727D1DC2FDEF0061A640 /* LaunchScreen.storyboard */; };
+		92611B5F1DC3A044000EE315 /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92611B5E1DC3A044000EE315 /* Secrets.swift */; };
+		92611B611DC3A083000EE315 /* DarkSkyWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92611B601DC3A083000EE315 /* DarkSkyWeather.swift */; };
+		92611B631DC3A38A000EE315 /* ReposDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92611B621DC3A38A000EE315 /* ReposDataStore.swift */; };
+		92611B651DC3A3CD000EE315 /* DarkSkyAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92611B641DC3A3CD000EE315 /* DarkSkyAPIClient.swift */; };
+		92611B671DC3CDBA000EE315 /* FiveDayCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92611B661DC3CDBA000EE315 /* FiveDayCollectionViewController.swift */; };
+		92EFAC751DC3DDE3007555D1 /* IndividualDayViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EFAC741DC3DDE3007555D1 /* IndividualDayViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +28,12 @@
 		8F07727B1DC2FDEF0061A640 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8F07727E1DC2FDEF0061A640 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8F0772801DC2FDEF0061A640 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		92611B5E1DC3A044000EE315 /* Secrets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
+		92611B601DC3A083000EE315 /* DarkSkyWeather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DarkSkyWeather.swift; sourceTree = "<group>"; };
+		92611B621DC3A38A000EE315 /* ReposDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReposDataStore.swift; sourceTree = "<group>"; };
+		92611B641DC3A3CD000EE315 /* DarkSkyAPIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DarkSkyAPIClient.swift; sourceTree = "<group>"; };
+		92611B661DC3CDBA000EE315 /* FiveDayCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FiveDayCollectionViewController.swift; sourceTree = "<group>"; };
+		92EFAC741DC3DDE3007555D1 /* IndividualDayViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndividualDayViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +68,13 @@
 			children = (
 				8F0772741DC2FDEF0061A640 /* AppDelegate.swift */,
 				8F0772761DC2FDEF0061A640 /* ViewController.swift */,
+				92611B621DC3A38A000EE315 /* ReposDataStore.swift */,
+				92611B641DC3A3CD000EE315 /* DarkSkyAPIClient.swift */,
+				92611B5E1DC3A044000EE315 /* Secrets.swift */,
+				92611B601DC3A083000EE315 /* DarkSkyWeather.swift */,
 				8F0772781DC2FDEF0061A640 /* Main.storyboard */,
+				92611B661DC3CDBA000EE315 /* FiveDayCollectionViewController.swift */,
+				92EFAC741DC3DDE3007555D1 /* IndividualDayViewCell.swift */,
 				8F07727B1DC2FDEF0061A640 /* Assets.xcassets */,
 				8F07727D1DC2FDEF0061A640 /* LaunchScreen.storyboard */,
 				8F0772801DC2FDEF0061A640 /* Info.plist */,
@@ -137,8 +155,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92EFAC751DC3DDE3007555D1 /* IndividualDayViewCell.swift in Sources */,
+				92611B611DC3A083000EE315 /* DarkSkyWeather.swift in Sources */,
 				8F0772771DC2FDEF0061A640 /* ViewController.swift in Sources */,
+				92611B631DC3A38A000EE315 /* ReposDataStore.swift in Sources */,
+				92611B651DC3A3CD000EE315 /* DarkSkyAPIClient.swift in Sources */,
+				92611B5F1DC3A044000EE315 /* Secrets.swift in Sources */,
 				8F0772751DC2FDEF0061A640 /* AppDelegate.swift in Sources */,
+				92611B671DC3CDBA000EE315 /* FiveDayCollectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,6 +326,7 @@
 				8F0772851DC2FDEF0061A640 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
